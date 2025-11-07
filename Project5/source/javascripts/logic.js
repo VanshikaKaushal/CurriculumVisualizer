@@ -79,7 +79,7 @@ document.addEventListener('mouseover', function(event) {
 
 document.addEventListener('mouseout', function(event) {
   document.querySelectorAll('.course').forEach(el => {
-    el.style.backgroundColor = '';
+    el.style.backgroundColor = 'white';
   });
 });
 
