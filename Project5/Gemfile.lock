@@ -113,6 +113,11 @@ GEM
     rb-inotify (0.11.1)
       ffi (~> 1.0)
     rexml (3.4.4)
+    sass (3.7.4)
+      sass-listen (~> 4.0.0)
+    sass-listen (4.0.0)
+      rb-fsevent (~> 0.9, >= 0.9.4)
+      rb-inotify (~> 0.9, >= 0.9.7)
     sassc (2.4.0)
       ffi (~> 1.9)
     securerandom (0.4.1)
@@ -147,6 +152,7 @@ PLATFORMS
 DEPENDENCIES
   middleman (~> 4.5)
   middleman-autoprefixer (~> 3.0)
+  sass
   terser (~> 1.1)
   tzinfo-data
   wdm (~> 0.1)

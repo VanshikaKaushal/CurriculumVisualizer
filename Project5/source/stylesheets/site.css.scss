@@ -1,24 +1,45 @@
-body {
-  background-color: #fbc547;
-  color: #333;
-  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
-    "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
-    "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
-    "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-  padding: 18vh 1rem;
-  text-align: center;
+/* Styling for spanner tags */
+.prereqSequence {
+	color: #90ee90; /* light green */
 }
 
-a {
-  color: rgba(#000, 0.7);
-
-  &:focus,
-  &:hover {
-    color: rgba(#000, 0.6);
-  }
+.prereq {
+	color: #008000;  /* green */
 }
 
-.middleman-logo {
-  margin-bottom: 1rem;
-  width: 10rem;
+.coreqSequence {
+	color: #ffc0cb; /* pink */
 }
+
+.coreq {
+	color: #800080; /* purple */
+}
+
+.postreqSequence {
+	color: #add8e6; /* light blue */
+}
+
+.postreq {
+	color: #0000ff; /* blue */
+}
+
+/* ------------------------------- */
+
+/* Table styling */
+table {
+	table-layout: fixed;
+
+	/* Merge borders to make the table look more cohesive. */
+	border-collapse: collapse;
+
+	/* Adjust table to be in page center. */
+	margin-left: auto;
+	margin-right: auto;
+}
+
+th, td {
+	/* table elements are enclosed with borders to make them stand out. */
+	border: 1px solid;
+}
+
+/* ------------------------------ */
