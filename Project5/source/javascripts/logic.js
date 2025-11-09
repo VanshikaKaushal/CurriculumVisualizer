@@ -25,7 +25,7 @@ let courses = {
   "CSE 32X1": { prerequisites: ["CSE 2331"], postrequisites: ["CSE 34X1"], corequisites: [] },
   "CSE 34X1": { prerequisites: ["CSE 32X1"], postrequisites: ["CSE 35X1"], corequisites: [] },
   "CSE 35X1": { prerequisites: ["CSE 34X1", "CSE 2431"], postrequisites: [], corequisites: [] },
-  "CSE 3341": { prerequisites: ["CSE 2231", "CSE 2331", "CSE 2421, CSE 390X"], postrequisites: [], corequisites: [] },
+  "CSE 3341": { prerequisites: ["CSE 2231", "CSE 2331", "CSE 2421", "CSE 390X"], postrequisites: [], corequisites: [] },
   "CSE 390X": { prerequisites: ["CSE 2231", "CSE 2321", "CSE 2421"], postrequisites: ["CSE 591X", "CSE 3341"], corequisites: [] },
   "CSE 591X": { prerequisites: ["CSE 390X"], postrequisites: [], corequisites: [] },
   "ECE 2020": { prerequisites: ["MATH 1172", "PHYSICS 1250"], postrequisites: [], corequisites: [] },
