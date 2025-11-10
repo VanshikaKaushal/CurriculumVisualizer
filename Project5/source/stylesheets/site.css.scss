@@ -1,11 +1,39 @@
 // Written by Luke Martin and Aayush Paul
 
+.header-name {
+	text-align: center;
+	background-color: #d4284b; /* OSU red */
+	color: white;
+	padding: 20px 0;
+	font-family: 'Segoe UI', sans-serif;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.preamble {
+	width: 80%;
+	margin: 20px auto;
+	background-color: white;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+	line-height: 1.6;
+	font-family: 'Verdana', sans-serif;
+}
+
 /* Styling for background */
 body {
 	background-color: #eff1f2; 
-	margin: 0; 
+ 	margin: 0; 
+ }
+.course a {
+	text-decoration: none;
+	color: #0f0f0f;
+	font-weight: 500;
 }
-
+.course a:hover {
+	color: #d4284b; /* OSU Red accent */
+	text-decoration: underline;
+}
 /* Styling for spanner tags */
 .prereqSequence {
 	color: #90ee90; /* light green */
@@ -33,6 +61,15 @@ body {
 
 /* ------------------------------- */
 
+.secondaryTable {
+	width: 100%;
+	margin: 10px 0;
+	background-color: white;
+	border-radius: 6px;
+	box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+
 /* Table styling */
 table {
 	width: 90%; 
@@ -47,6 +84,55 @@ table {
 	border-radius: 4px;
 	overflow: hidden; 
 }
+/* ---------- Default: Desktop ---------- */
+.primaryTable {
+  width: 90%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+/* ---------- Tablet (600px–899px) ---------- */
+@media (min-width: 600px) and (max-width: 899px) {
+  .primaryTable {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columns */
+    gap: 20px;
+  }
+
+  .primaryTable > tbody > tr {
+    display: contents; /* allows td to behave as grid items */
+  }
+
+  .primaryTable td {
+    width: 100%;
+  }
+
+  .secondaryTable {
+    width: 100%;
+  }
+}
+
+/* ---------- Mobile (<600px) ---------- */
+@media (max-width: 599px) {
+  .primaryTable {
+    display: grid;
+    grid-template-columns: 1fr; /* single column */
+    gap: 15px;
+  }
+
+  .primaryTable > tbody > tr {
+    display: contents;
+  }
+
+  .primaryTable td {
+    width: 100%;
+  }
+
+  .secondaryTable {
+    width: 100%;
+  }
+}
+
 
 th, td {
 	/* table elements are enclosed with soft gray border to make them stand out. */
@@ -63,6 +149,16 @@ th {
   background-color: #d4284b;
   color: white;
   font-size: 1.1em; /* Makes header text slightly bigger */
+}
+
+
+.footer {
+	text-align: center;
+	padding: 10px;
+	background-color: #f4f4f4;
+	color: #555;
+	margin-top: 40px;
+	font-size: 0.9em;
 }
 
 /* ------------------------------ */
