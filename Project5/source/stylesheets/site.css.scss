@@ -1,164 +1,155 @@
-// Written by Luke Martin and Aayush Paul
+// Written by Luke Martin, Aayush Paul and Vanshika Kaushal
 
 .header-name {
-	text-align: center;
-	background-color: #d4284b; /* OSU red */
-	color: white;
-	padding: 20px 0;
-	font-family: 'Segoe UI', sans-serif;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  background-color: #d4284b;
+  color: white;
+  padding: 20px 0;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .preamble {
-	width: 80%;
-	margin: 20px auto;
-	background-color: white;
-	padding: 20px;
-	border-radius: 10px;
-	box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-	line-height: 1.6;
-	font-family: 'Verdana', sans-serif;
+  width: 80%;
+  margin: 20px auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  line-height: 1.6;
+  font-family: 'Verdana', sans-serif;
 }
 
-/* Styling for background */
 body {
-	background-color: #eff1f2; 
- 	margin: 0; 
- }
+  background: linear-gradient(to bottom right, #f7f8fa, #e9ecef);
+  margin: 0;
+}
+
+// This adds animation to the year grid
+.mainContent {
+  padding: 20px;
+  animation: fadeIn 0.6s ease-in-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+
 .course a {
-	text-decoration: none;
-	color: #0f0f0f;
-	font-weight: 500;
+  text-decoration: none;
+  color: #0f0f0f;
+  font-weight: 500;
+  font-size: clamp(0.9rem, 1.8vw, 1rem);
 }
 .course a:hover {
-	color: #d4284b; /* OSU Red accent */
-	text-decoration: underline;
-}
-/* Styling for spanner tags */
-.prereqSequence {
-	color: #90ee90; /* light green */
+  color: #d4284b;
+  text-decoration: underline;
 }
 
-.prereq {
-	color: #008000;  /* green */
-}
-
-.coreqSequence {
-	color: #ffc0cb; /* pink */
-}
-
-.coreq {
-	color: #800080; /* purple */
-}
-
-.postreqSequence {
-	color: #add8e6; /* light blue */
-}
-
-.postreq {
-	color: #0000ff; /* blue */
-}
-
-/* ------------------------------- */
-
-.secondaryTable {
-	width: 100%;
-	margin: 10px 0;
-	background-color: white;
-	border-radius: 6px;
-	box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+// This will show the links in the bottom when we hover over hyperlinks
+a:focus {
+  outline: 2px dashed #d4284b;
+  outline-offset: 2px;
 }
 
 
-/* Table styling */
-table {
-	width: 90%; 
+/* hovering colors */
+.prereqSequence { color: #90ee90; }
+.prereq { color: #008000; }
+.coreqSequence { color: #ffc0cb; }
+.coreq { color: #800080; }
+.postreqSequence { color: #add8e6; }
+.postreq { color: #0000ff; }
 
-	/* Merge borders to make the table look more cohesive. */
-	border-collapse: collapse;
-
-	/* Adjust table to be in page center. */
-	margin-left: auto;
-	margin-right: auto;
-
-	border-radius: 4px;
-	overflow: hidden; 
-}
-/* ---------- Default: Desktop ---------- */
+/* ---------- Grid Layout ---------- */
 .primaryTable {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
   width: 90%;
   margin: 0 auto;
-  border-collapse: collapse;
 }
 
-/* ---------- Tablet (600px–899px) ---------- */
+/* Tablet */
 @media (min-width: 600px) and (max-width: 899px) {
   .primaryTable {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 columns */
-    gap: 20px;
-  }
-
-  .primaryTable > tbody > tr {
-    display: contents; /* allows td to behave as grid items */
-  }
-
-  .primaryTable td {
-    width: 100%;
-  }
-
-  .secondaryTable {
-    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* ---------- Mobile (<600px) ---------- */
+/* Mobile */
 @media (max-width: 599px) {
   .primaryTable {
-    display: grid;
-    grid-template-columns: 1fr; /* single column */
-    gap: 15px;
+    grid-template-columns: 1fr;
   }
+}
 
-  .primaryTable > tbody > tr {
-    display: contents;
-  }
+/* Year Block Styling */
+.year {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  padding: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-top: 4px solid #d4284b;
+}
 
-  .primaryTable td {
-    width: 100%;
-  }
 
-  .secondaryTable {
-    width: 100%;
-  }
+
+.year:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+
+.year h3 {
+  text-align: center;
+  background-color: #746c6e;
+  color: white;
+  padding: 10px;
+  border-radius: 6px 6px 0 0;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+}
+
+.secondaryTable {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.secondaryTable th {
+  background-color: #d4284b;
+  color: white;
+  border-radius: 6px 6px 0 0;
+  font-weight: 600;
 }
 
 
 th, td {
-	/* table elements are enclosed with soft gray border to make them stand out. */
-	border: 1px solid #cfd4d8;
-
-	padding: 12px;
-
-	text-align: center;
-	vertical-align: middle;
+  border: 1px solid #cfd4d8;
+  padding: 12px;
+  text-align: center;
+  vertical-align: middle;
 }
 
 th {
-  /* Official OSU Gray */
   background-color: #d4284b;
   color: white;
-  font-size: 1.1em; /* Makes header text slightly bigger */
+  font-size: 1.1em;
 }
-
 
 .footer {
-	text-align: center;
-	padding: 10px;
-	background-color: #f4f4f4;
-	color: #555;
-	margin-top: 40px;
-	font-size: 0.9em;
+  text-align: center;
+  padding: 10px;
+  background-color: #f4f4f4;
+  color: #555;
+  margin-top: 40px;
+  font-size: 0.9em;
 }
-
-/* ------------------------------ */
