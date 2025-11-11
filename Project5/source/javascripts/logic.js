@@ -45,6 +45,10 @@ document.addEventListener('mouseover', function(event) {
     const coReq = courses[courseId].corequisites;
     const preSequence = getPreSequence(courseId);
     const postSequence = getPostSequence(courseId);
+
+    preSequence = preSequence.filter(pre => !immediatePre.includes(pre));
+    postSequence = postSequence.filter(post => !immediatePost.includes(post));
+    
     hovered.style.backgroundColor = 'yellow';
 
     for (pre of immediatePre) {
