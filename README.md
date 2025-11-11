@@ -1,5 +1,5 @@
 # project5-group5
-# B.S. CSE Curriculum Map (Middleman Project)
+# Curriculum Visualization 
 
 This project is a **responsive academic curriculum map** built using [Middleman](https://middlemanapp.com/).  
 It visually displays a 4-year Computer Science and Engineering degree plan with interactive features, modern design, and responsive behavior across devices.
