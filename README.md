@@ -1,4 +1,3 @@
-# project5-group5
 # Curriculum Visualization 
 
 This project is a **responsive academic curriculum map** built using [Middleman](https://middlemanapp.com/).  
@@ -15,13 +14,6 @@ It visually displays a 4-year Computer Science and Engineering degree plan with 
 - **Structured Middleman Architecture** for easy editing
 
 ---
-
-## Team Members
-
-- Aayush Paul
-- Abhi Sarkar
-- Luke Martin
-- Vanshika Kaushal
 
 # Running the project
 
